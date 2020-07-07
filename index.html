@@ -1,84 +1,58 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta charset="UTF-8">
-      <script type="text/javascript">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
 
-        function abrirfacebook()
-        {
-          //window.location.href = "https://facebook.com";
-          window.open("https://facebook.com");
-        }
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-        function abrirtwitter()
-        {
-          //window.location.href = "https://twitter.com";
-          window.open("https://twitter.com");
-        }
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        function abrirgmail()
-        {
-          //window.location.href = "https://gmail.com";
-          window.open("https://gmail.com");
-        }
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
 
-        function abrirradio()
-        {
-          //window.location.href = "http://liber.scienceontheweb.net/radio.html";
-          window.open("http://liber.scienceontheweb.net/radio.html");
-        }
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+  </head>
+  <body>
 
-      </script>
-      <style type="text/css">
-      	.icono
-      	{
-      		width: 35%;
-      		padding: 20px;
-      		display: inline-block;
-      	}
-      	.border
-      	{
-      		-webkit-border-radius: 10px;
-			-moz-border-radius: 10px;
-			border-radius: 10px;
-      	}
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">App</h1>
+    </header>
 
-      	.fondo
-      	{
-      		background-color: #000000;
-      	}
-      </style>
-    </head>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
 
-    <body class="fondo" onload="javascript:iniciar()">
-
-      <div style="width: 100%; text-align: center;">
-
-      	<div class="icono">
-          <a href="javascript:abrirfacebook()">
-      		  <img src="images/facebook.png" class="border"  width="100%">
-          </a>
-      	</div>
-
-      	<div class="icono">
-          <a href="javascript:abrirtwitter()">
-      		  <img src="images/twitter.png" class="border"  width="100%">
-          </a>
-      	</div>
-
-      	<div class="icono">
-          <a href="javascript:abrirgmail()">
-      		  <img src="images/gmail.png" class="border"  width="100%">
-          </a>
-      	</div>
-
-      	<div class="icono">
-          <a href="javascript:abrirradio()">
-      		  <img src="images/radio.png" class="border"  width="100%">
-          </a>
-      	</div>
-
+      <div style="padding: 10px">
+        <form>
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="Apellido">
+          <input type="text" placeholder="DNI">
+          <textarea rows="5"></textarea>
+          <button class="btn btn-positive btn-block">Guardar</button>
+        </form>
       </div>
-    </body>
-  </html>
+      
+      <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+          <span class="icon icon-home"></span>
+          <span class="tab-label">Home</span>
+        </a>
+        <a class="tab-item" href="#">
+          <span class="icon icon-person"></span>
+          <span class="tab-label">Profile</span>
+        </a>
+        <a class="tab-item" href="#">
+          <span class="icon icon-star-filled"></span>
+          <span class="tab-label">Favorites</span>
+        </a>
+      </nav>
+
+    </div>
+
+  </body>
+</html>
